@@ -867,24 +867,24 @@ public:
 											ListView_SetItem(list, &lvi);
 										}
 									}
-									else if(code==402)
-									{
-										// this is a subscription-only list, and the user is not a subscriber
-										TRACEI("[UpdateThread] [_Process]    SUBSCRIPTION REQUIRED; code:[402]");
-										if(data->list) data->list->FailedUpdate=true;
-										errors.insert(code);
+// 									else if(code==402)
+// 									{
+// 										// this is a subscription-only list, and the user is not a subscriber
+// 										TRACEI("[UpdateThread] [_Process]    SUBSCRIPTION REQUIRED; code:[402]");
+// 										if(data->list) data->list->FailedUpdate=true;
+// 										errors.insert(code);
 
-										if(list)
-										{
-											TRACEV("[UpdateThread] [_Process]    found list; SUBSCRIPTION REQUIRED");
-											const tstring str=LoadString(IDS_SUBSCRIPTIONREQUIRED);
+// 										if(list)
+// 										{
+// 											TRACEV("[UpdateThread] [_Process]    found list; SUBSCRIPTION REQUIRED");
+// 											const tstring str=LoadString(IDS_SUBSCRIPTIONREQUIRED);
 
-											lvi.iItem=data->index;
-											lvi.iSubItem=2;
-											lvi.pszText=(LPTSTR)str.c_str();
-											ListView_SetItem(list, &lvi);
-										}
-									}
+// 											lvi.iItem=data->index;
+// 											lvi.iSubItem=2;
+// 											lvi.pszText=(LPTSTR)str.c_str();
+// 											ListView_SetItem(list, &lvi);
+// 										}
+// 									}
 									else if(code==404)
 									{
 										// this list-url doesn't exist
