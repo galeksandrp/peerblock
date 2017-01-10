@@ -181,7 +181,7 @@ ECHO PeerBlock's compilation started on %START_TIME%
 ECHO and completed on %DATE%-%TIME%
 ECHO.
 ENDLOCAL
-PAUSE
+rem PAUSE
 EXIT /B
 
 
@@ -241,5 +241,5 @@ ECHO. & ECHO.
 ECHO Compilation FAILED!
 ECHO. & ECHO.
 ENDLOCAL
-PAUSE
+rem PAUSE
 EXIT
